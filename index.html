@@ -1,150 +1,163 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page__body">
 
 
 
-  <!------------------HEADER------------------->
-  <header>
-    <nav>
-      <a>
+  <!----------------------------HEADER----------------------------->
+  <header class="main__header">
+    <nav class="main__nav">
+      <a class="main__header__logo">
         <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип дизайн-студии Nerds">
       </a>
-      <ul>
-        <li>
-          <a href="index.html">Студия</a>
+      <ul class="main__nav__list">
+        <li class="main__nav__item nav__item--current">
+          <a class="main__nav__link" href="index.html">Студия</a>
         </li>
-        <li>
-          <a href="index.html#clients">Клиенты</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="blank.html">Клиенты</a>
         </li>
-        <li>
-          <a href="catalog.html">Магазин</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="catalog.html">Магазин</a>
         </li>
-        <li>
-          <a href="index.html#contacts">Контакты</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="blank.html">Контакты</a>
         </li>
       </ul>
 
-      <ul>
-        <li><a href="blank.html">Корзина</a></li>
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="blank.html">Корзина</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h1>Дизайн-студия «Nerds»</h1>
+
+
+  <!-----------------------------MAIN------------------------------>
+  <main class="container">
+    <h1 class="hidden">Дизайн-студия «Nerds»</h1>
 
 
 
     <!------------------ADVANTAGES------------------->
-    <section>
-      <h2>Преимущества</h2>
+    <section class="advantages">
+      <h2 class="hidden">Преимущества</h2>
 
-      <ul>
-        <li>
-          <h3>Долго, дорого,<br>скрупулезно.</h3>
-          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-          <a href="">Узнать больше</a>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <h3 class="advantages__title">Долго, дорого,<br>скрупулезно.</h3>
+          <p class="advantages__text">Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+          <a class="advantages__link button" href="">Узнать больше</a>
         </li>
 
-        <li>
-          <h3>Любим математику как никто другой</h3>
-          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-          <a href="">Узнать больше</a>
+        <li class="advantages__item">
+          <h3 class="advantages__title">Любим математику как никто другой</h3>
+          <p class="advantages__text">Никакого креатива, только математические формулы для расчета идеальных пропорций
+          </p>
+          <a class="advantages__link button" href="">Узнать больше</a>
         </li>
 
-        <li>
-          <h3>Только ночь, только харкор</h3>
-          <p>Работать днем, как все? Мы против этого.
+        <li class="advantages__item">
+          <h3 class="advantages__title">Только ночь, только харкор</h3>
+          <p class="advantages__text">Работать днем, как все? Мы против этого.
             Ближе к полуночи работа только начинается</p>
-          <a href="">Узнать больше</a>
+          <a class="advantages__link button" href="">Узнать больше</a>
         </li>
       </ul>
     </section>
 
 
 
-    <!------------------SERVICES------------------->
-    <section>
-      <h2>Предоставляемые услуги</h2>
+    <!-------------------SERVICES-------------------->
+    <section class="services">
+      <h2 class="hidden">Предоставляемые услуги</h2>
 
-      <div>
-        <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Веб-сайты">
-        <h3>Веб-сайты</h3>
-        <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-        <a href="">Заказать</a>
+      <div class="services__content">
+        <img class="services__content__img" src="https://via.placeholder.com/300x146" width="300" height="146"
+          alt="Веб-сайты">
+        <h3 class="services__content__title">Веб-сайты</h3>
+        <p class="services__content__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+        <a class="services__content__link button button-red" href="">Заказать</a>
       </div>
 
-      <div>
-        <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Приложения">
-        <h3>Приложения</h3>
-        <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-        <a href="">Заказать</a>
+      <div class="services__content">
+        <img class="services__content__img" src="https://via.placeholder.com/300x146" width="300" height="146"
+          alt="Приложения">
+        <h3 class="services__content__title">Приложения</h3>
+        <p class="services__content__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+        <a class="services__content__link button button-green" href="">Заказать</a>
       </div>
 
-      <div>
-        <img src="https://via.placeholder.com/300x146" width="300" height="146" alt="Презентации">
-        <h3>Презентации</h3>
-        <p>Вы даже не подозреваете насколько вы изумительны!</p>
-        <a href="">Заказать</a>
+      <div class="services__content">
+        <img class="services__content__img" src="https://via.placeholder.com/300x146" width="300" height="146"
+          alt="Презентации">
+        <h3 class="services__content__title">Презентации</h3>
+        <p class="services__content__text">Вы даже не подозреваете насколько вы изумительны!</p>
+        <a class="services__content__link button button-yellow" href="">Заказать</a>
       </div>
     </section>
 
 
 
-    <!------------------ABOUT-US------------------->
-    <section>
-      <h2>О нас</h2>
+    <!--------------------ABOUT---------------------->
+    <section class="about">
+      <h2 class="hidden">О нас</h2>
 
-      <div>
-        <p>Мы — маленькая, но гордая дизайн-студия из Краснодара</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+      <div class="about__desc">
+        <p class="about__desc__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара</p>
+        <p class="about__desc__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <p>Выполняем заказы на разработку:</p>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для IOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        <p class="about__desc__title">Выполняем заказы на разработку:</p>
+        <ul class="about__desc__list">
+          <li class="about__desc__item">Веб-сайтов любой сложности</li>
+          <li class="about__desc__item">Мобильных приложений для IOS и Android</li>
+          <li class="about__desc__item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
 
-      <div>
-        <img src="https://via.placeholder.com/360x208" width="360" height="208" alt="Лого дизайн-студии">
-        <p>С 2004 года любим точность во всем:</p>
-        <ul>
-          <li><span>146%</span> Уровень самоотдачи</li>
-          <li><span>100%</span> Соблюдение сроков</li>
-          <li><span>50%</span> Минимальная предоплата</li>
+      <div class="about__content">
+        <img class="about__content__img" src="https://via.placeholder.com/360x208" width="360" height="208"
+          alt="Лого дизайн-студии">
+        <p class="about__content__title">С 2004 года любим точность во всем:</p>
+        <ul class="about__content__list">
+          <li class="about__content__item"><span class="about__content__level">146</span> Уровень самоотдачи</li>
+          <li class="about__content__item"><span class="about__content__level">100</span> Соблюдение сроков</li>
+          <li class="about__content__item"><span class="about__content__level">50</span> Минимальная предоплата</li>
         </ul>
       </div>
     </section>
 
 
 
-    <!------------------OUR-CLIENTS------------------->
-    <section>
-      <a name="clients"></a>
-      <h2>Наши клиенты</h2>
+    <!-------------------CLIENTS--------------------->
+    <section class="clients">
+      <h2 class="hidden">Наши клиенты</h2>
 
-      <ul>
-        <li>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/200x90" width="200"
-              height="90" alt="Html academy"></a>
+      <ul class="clients__list">
+        <li class="clients__item">
+          <a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss"><img
+              src="https://via.placeholder.com/200x90" width="200" height="90" alt="Html academy"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/200x90" width="200" height="90" alt="Borodinski"></a>
+        <li class="clients__item">
+          <a class="clients__link" href=""><img class="clients__img" src="https://via.placeholder.com/200x90"
+              width="200" height="90" alt="Borodinski"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/200x90" width="200" height="90" alt="Pink"></a>
+        <li class="clients__item">
+          <a class="clients__link" href=""><img class="clients__img" src="https://via.placeholder.com/200x90"
+              width="200" height="90" alt="Pink"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/200x90" width="200" height="90" alt="Mishka"></a>
+        <li class="clients__item">
+          <a class="clients__link" href=""><img class="clients__img" src="https://via.placeholder.com/200x90"
+              width="200" height="90" alt="Mishka"></a>
         </li>
       </ul>
     </section>
@@ -152,39 +165,52 @@
 
 
 
-  <!------------------FOOTER------------------->
-  <footer>
-    <section>
-      <a name="contacts"></a>
-      <h2>Контактная информация</h2>
+  <!----------------------------FOOTER----------------------------->
+  <footer class="main-footer">
 
-      <p><b>Nerds design studio</b></p>
-      <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-      <a href="">Напишите нам</a>
 
-      <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="Местоположение на карте">
+
+    <!-------------------CONTACTS-------------------->
+    <section class="contacts">
+      <h2 class="hidden">Контактная информация</h2>
+
+      <p class="contacts__title">Nёrds design studio</p>
+      <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <a class="contacts__link button" href="">Напишите нам</a>
+
+      <img class="contacts__img" src="https://via.placeholder.com/1440x416" width="1440" height="416"
+        alt="Местоположение на карте">
     </section>
 
-    <section>
-      <h2>Наши контакты</h2>
 
-      <ul>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="VK"></a>
+
+    <!--------------------SOCIAL--------------------->
+    <section class="social">
+      <h2 class="hidden">Наши контакты</h2>
+
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="VK"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="Facebook"></a>
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="Facebook"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="Instagram"></a>
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="Instagram"></a>
         </li>
       </ul>
     </section>
 
-    <div>
-      <p><b>Давайте дружить, это выгодно</b></p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+
+
+    <!---------------------PROMO--------------------->
+    <div class="promo">
+      <p class="promo__title">Давайте дружить, это выгодно</p>
+      <p class="promo__text">Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
 
