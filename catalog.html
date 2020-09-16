@@ -16,7 +16,7 @@
   <!----------------------------HEADER----------------------------->
   <header class="main__header">
     <nav class="main__nav">
-      <a class="main__header__logo">
+      <a class="main__header__logo" href="index.html">
         <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип дизайн-студии Nerds">
       </a>
       <ul class="main__nav__list">
@@ -52,53 +52,56 @@
       <h2 class="hidden">Фильтр товаров</h2>
 
       <div>
-        <p class="sort__title">Стоимость:</p>
+        <p class="filter__title">Стоимость:</p>
         <input type="range">
         от <output name="result">0</output>
         до <output name="result">15 000</output>
       </div>
 
-      <div>
-        <p class="sort__title">Сетка:</p>
-        <label class="sort__grid">
-          <input type="radio" name="grid">
-          Адаптивная
-        </label>
-        <label class="sort__grid">
-          <input type="radio" name="grid">
-          Фиксированная
-        </label>
-        <label class="sort__grid">
-          <input type="radio" name="grid">
-          Резиновая
-        </label>
-      </div>
+      <form action="https://echo.htmlacademy.ru/" method="post">
+        <div>
+          <p class="filter__title">Сетка:</p>
+          <label class="sort__grid">
+            <input type="radio" name="grid">
+            Адаптивная
+          </label>
+          <label class="filter__grid">
+            <input type="radio" name="grid">
+            Фиксированная
+          </label>
+          <label class="filter__grid">
+            <input type="radio" name="grid">
+            Резиновая
+          </label>
+        </div>
 
-      <div>
-        <p class="sort__title">Особенности:</p>
-        <label class="sort__features">
-          <input type="checkbox">
-          Слайдер
-        </label>
-        <label class="sort__features">
-          <input type="checkbox">
-          Блок преимуществ
-        </label>
-        <label class="sort__features">
-          <input type="checkbox">
-          Новости
-        </label>
-        <label class="sort__features">
-          <input type="checkbox">
-          Галерея
-        </label>
-        <label class="sort__features">
-          <input type="checkbox">
-          Корзина
-        </label>
-      </div>
+        <div>
+          <p class="filter__title">Особенности:</p>
+          <label class="filter__features">
+            <input type="checkbox">
+            Слайдер
+          </label>
+          <label class="filter__features">
+            <input type="checkbox">
+            Блок преимуществ
+          </label>
+          <label class="filter__features">
+            <input type="checkbox">
+            Новости
+          </label>
+          <label class="filter__features">
+            <input type="checkbox">
+            Галерея
+          </label>
+          <label class="filter__features">
+            <input type="checkbox">
+            Корзина
+          </label>
+        </div>
 
-      <button class="filter__button" type="button">Показать</button>
+        <button class="filter__button" type="button">Показать</button>
+      </form>
+
     </section>
 
 
@@ -128,7 +131,7 @@
         <li class="goods__item">
           <img class="goods__img" src="https://via.placeholder.com/358x578" width="358" height="578" alt="Sedona">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Sedona</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Sedona</a></h3>
             <p class="goods__popup__text">Информационный сайт для туристов</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -136,7 +139,7 @@
         <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Pink app">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Pink app</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Pink app</a></h3>
             <p class="goods__popup__text">Продутовый лендинг приложений для IOS и Android</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -144,7 +147,7 @@
         <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Barbershop">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Barbershop</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Barbershop</a></h3>
             <p class="goods__popup__text">Сайт салона красоты. Для мужчин, да.</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -152,7 +155,7 @@
         <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Mishka">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Mishka</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Mishka</a></h3>
             <p class="goods__popup__text">Интернет-магазин вязаных игрушек</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -160,7 +163,7 @@
         <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="A plus">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">A plus</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">A plus</a></h3>
             <p class="goods__popup__text">Лендинг курсов повышения квалификации</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -168,7 +171,7 @@
         <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Кваст">
           <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Кваст</a></h3>
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Кваст</a></h3>
             <p class="goods__popup__text">Промо-сайт производителя крафтового кваса</p>
             <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
@@ -176,7 +179,8 @@
       </ul>
 
       <ul class="goods__pagination__list">
-        <li class="goods__pagination__item"><a class="goods__pagination__link goods__pagination__link--current" href="">1</a></li>
+        <li class="goods__pagination__item"><a class="goods__pagination__link goods__pagination__link--current"
+            href="">1</a></li>
         <li class="goods__pagination__item"><a class="goods__pagination__link" href="">2</a></li>
         <li class="goods__pagination__item"><a class="goods__pagination__link" href="">3</a></li>
         <li class="goods__pagination__item"><a class="goods__pagination__link goods__next" href="">Следующая</a></li>

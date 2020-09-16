@@ -31,6 +31,13 @@
 
   /* BACKGROUND-COLOR */
   --basic-light-gray: #EEE;
+  --pagination-bg: rgba(0, 0, 0, 0.0001);
+
+  /* BOX SHADOW */
+  --shadow-color: rgba(0, 1, 1, 0.1);
+
+  /* BORDER */
+  --pagination-border: #DBDBDB;
 }
 
 /* GLOBAL */
@@ -145,7 +152,7 @@ a {
 .button:active {
   background-color: var(--active-btn-red);
 
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--shadow-color);
 
   color: var(--active-white);
 }
@@ -346,16 +353,16 @@ a {
 
 /* FILTER */
 
-.sort__title {
-  font-weight: bold;
+.filter__title {
+  font-weight: 700;
   font-size: 18px;
   line-height: 30px;
 
   text-transform: uppercase;
 }
 
-.sort__grid,
-.sort__features {
+.filter__grid,
+.filter__features {
   color: var(--basic-dark);
 }
 
@@ -381,7 +388,7 @@ a {
 
   background-color: var(--active-btn-gray);
 
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
 
 .filter__button:focus {
@@ -512,7 +519,7 @@ a {
 .goods__popup__button:active {
   background-color: var(--active-btn-red);
 
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
 
 .goods__pagination__list {
@@ -555,12 +562,12 @@ a {
 .goods__pagination__link:active {
   background-color: var(--active-btn-gray);
 
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--shadow-color);
 }
 
 .goods__pagination__link--current {
-  background: rgba(0, 0, 0, 0.0001);
-  border: 3px solid #DBDBDB;
+  background: var(--pagination-bg);
+  border: 3px solid var(--pagination-border);
   box-sizing: border-box;
   border-radius: 3px;
 }
