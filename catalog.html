@@ -4,194 +4,237 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page__body inner__page">
 
 
 
-  <!------------------HEADER------------------->
-  <header>
-    <nav>
-      <a>
+  <!----------------------------HEADER----------------------------->
+  <header class="main__header">
+    <nav class="main__nav">
+      <a class="main__header__logo">
         <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип дизайн-студии Nerds">
       </a>
-      <ul>
-        <li>
-          <a href="index.html">Студия</a>
+      <ul class="main__nav__list">
+        <li class="main__nav__item nav__item--current">
+          <a class="main__nav__link" href="index.html">Студия</a>
         </li>
-        <li>
-          <a href="blank.html">Клиенты</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="blank.html">Клиенты</a>
         </li>
-        <li>
-          <a href="catalog.html">Магазин</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="catalog.html">Магазин</a>
         </li>
-        <li>
-          <a href="blank.html">Контакты</a>
+        <li class="main__nav__item">
+          <a class="main__nav__link" href="blank.html">Контакты</a>
         </li>
       </ul>
 
-      <ul>
-        <li><a href="blank.html">Корзина</a></li>
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="blank.html">Корзина</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <h1>Магазин готовых шаблонов</h1>
 
 
-    <!------------------FILTER------------------->
-    <section>
-      <h2>Фильтр товаров</h2>
+  <!-----------------------------MAIN------------------------------>
+  <main class="container">
+    <h1 class="page__title">Магазин готовых шаблонов</h1>
+
+
+    <!---------------------FILTER-------------------->
+    <section class="filter">
+      <h2 class="hidden">Фильтр товаров</h2>
 
       <div>
-        <p>Стоимость:</p>
-        <!--input-range-->
+        <p class="sort__title">Стоимость:</p>
+        <input type="range">
+        от <output name="result">0</output>
+        до <output name="result">15 000</output>
       </div>
 
       <div>
-        <p>Сетка:</p>
-        <!--input-radio-->
-        Адаптивная
-        Фиксированная
-        Резиновая
+        <p class="sort__title">Сетка:</p>
+        <label class="sort__grid">
+          <input type="radio" name="grid">
+          Адаптивная
+        </label>
+        <label class="sort__grid">
+          <input type="radio" name="grid">
+          Фиксированная
+        </label>
+        <label class="sort__grid">
+          <input type="radio" name="grid">
+          Резиновая
+        </label>
       </div>
 
       <div>
-        <p>Особенности:</p>
-        <!--input-checkbox-->
-        Слайдер
-        Блок преимуществ
-        Новости
-        Галерея
-        Корзина
+        <p class="sort__title">Особенности:</p>
+        <label class="sort__features">
+          <input type="checkbox">
+          Слайдер
+        </label>
+        <label class="sort__features">
+          <input type="checkbox">
+          Блок преимуществ
+        </label>
+        <label class="sort__features">
+          <input type="checkbox">
+          Новости
+        </label>
+        <label class="sort__features">
+          <input type="checkbox">
+          Галерея
+        </label>
+        <label class="sort__features">
+          <input type="checkbox">
+          Корзина
+        </label>
       </div>
 
-      <button type="button">Показать</button>
+      <button class="filter__button" type="button">Показать</button>
     </section>
 
 
 
-    <!------------------SORT------------------->
-    <section>
-      <h2>Сортировка товаров</h2>
+    <!---------------------SORT---------------------->
+    <section class="sort">
+      <h2 class="hidden">Сортировка товаров</h2>
 
-      <p>Сортировать:</p>
-      <ul>
-        <li><a href="">по цене</a></li>
-        <li><a href="">по типу</a></li>
-        <li><a href="">по названию</a></li>
-        <li><a href="">по убыванию</a></li>
-        <li><a href="">по возрастанию</a></li>
+      <p class="sort__title">Сортировать:</p>
+      <ul class="sort__list">
+        <li class="sort__item sort__item--current"><a class="sort__link" href="">по цене</a></li>
+        <li class="sort__item"><a class="sort__link" href="">по типу</a></li>
+        <li class="sort__item"><a class="sort__link" href="">по названию</a></li>
+        <li class="sort__item"><a class="sort__link" href="">по убыванию</a></li>
+        <li class="sort__item"><a class="sort__link" href="">по возрастанию</a></li>
       </ul>
 
     </section>
 
 
 
-    <!------------------GOODS------------------->
+    <!---------------------GOODS--------------------->
     <section>
-      <h2>Товары</h2>
+      <h2 class="hidden">Товары</h2>
 
-      <ul>
-        <li>
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Sedona">
-          <div>
-            <h3><a href="">Sedona</a></h3>
-            <p>Информационный сайт для туристов</p>
-            <a href="">9 900 &#8381;</a>
+      <ul class="goods__list">
+        <li class="goods__item">
+          <img class="goods__img" src="https://via.placeholder.com/358x578" width="358" height="578" alt="Sedona">
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Sedona</a></h3>
+            <p class="goods__popup__text">Информационный сайт для туристов</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
-        <li>
+        <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Pink app">
-          <div>
-            <h3><a href="">Pink app</a></h3>
-            <p>Продутовый лендинг приложений для IOS и Android</p>
-            <a href="">9 900 &#8381;</a>
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Pink app</a></h3>
+            <p class="goods__popup__text">Продутовый лендинг приложений для IOS и Android</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
-        <li>
+        <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Barbershop">
-          <div>
-            <h3><a href="">Barbershop</a></h3>
-            <p>Сайт салона красоты. Для мужчин, да.</p>
-            <a href="">9 900 &#8381;</a>
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Barbershop</a></h3>
+            <p class="goods__popup__text">Сайт салона красоты. Для мужчин, да.</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
-        <li>
+        <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Mishka">
-          <div>
-            <h3><a href="">Mishka</a></h3>
-            <p>Интернет-магазин вязаных игрушек</p>
-            <a href="">9 900 &#8381;</a>
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Mishka</a></h3>
+            <p class="goods__popup__text">Интернет-магазин вязаных игрушек</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
-        <li>
+        <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="A plus">
-          <div>
-            <h3><a href="">A plus</a></h3>
-            <p>Лендинг курсов повышения квалификации</p>
-            <a href="">9 900 &#8381;</a>
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">A plus</a></h3>
+            <p class="goods__popup__text">Лендинг курсов повышения квалификации</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
-        <li>
+        <li class="goods__item">
           <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Кваст">
-          <div>
-            <h3><a href="">Кваст</a></h3>
-            <p>Промо-сайт производителя крафтового кваса</p>
-            <a href="">9 900 &#8381;</a>
+          <div class="goods__popup">
+            <h3 class="goods__popup__title"><a class="goods__popup__link" href="">Кваст</a></h3>
+            <p class="goods__popup__text">Промо-сайт производителя крафтового кваса</p>
+            <a class="goods__popup__button" href="">9 900 &#8381;</a>
           </div>
         </li>
       </ul>
 
-      <ul>
-        <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">Следующая</a></li>
+      <ul class="goods__pagination__list">
+        <li class="goods__pagination__item"><a class="goods__pagination__link goods__pagination__link--current" href="">1</a></li>
+        <li class="goods__pagination__item"><a class="goods__pagination__link" href="">2</a></li>
+        <li class="goods__pagination__item"><a class="goods__pagination__link" href="">3</a></li>
+        <li class="goods__pagination__item"><a class="goods__pagination__link goods__next" href="">Следующая</a></li>
       </ul>
     </section>
   </main>
 
 
 
-  <!------------------FOOTER------------------->
-  <footer>
-    <section>
-      <h2>Контактная информация</h2>
+  <!----------------------------FOOTER----------------------------->
+  <footer class="main__footer">
 
-      <div>
-        <p><b>Nerds design studio</b></p>
-        <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-        <a href="">Напишите нам</a>
-      </div>
 
-      <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="Местоположение на карте">
+
+    <!-------------------CONTACTS-------------------->
+    <section class="contacts">
+      <h2 class="hidden">Контактная информация</h2>
+
+      <p class="contacts__title">Nёrds design studio</p>
+      <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+      <a class="contacts__link button" href="">Напишите нам</a>
+
+      <img class="contacts__img" src="https://via.placeholder.com/1440x416" width="1440" height="416"
+        alt="Местоположение на карте">
     </section>
 
-    <section>
-      <h2>Наши контакты</h2>
 
-      <ul>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="VK"></a>
+
+    <!--------------------SOCIAL--------------------->
+    <section class="social">
+      <h2 class="hidden">Наши контакты</h2>
+
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="VK"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="Facebook"></a>
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="Facebook"></a>
         </li>
-        <li>
-          <a href=""><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="Instagram"></a>
+        <li class="social__item">
+          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
+              height="81" alt="Instagram"></a>
         </li>
       </ul>
     </section>
 
-    <div>
-      <p><b>Давайте дружить, это выгодно</b></p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+
+
+    <!---------------------PROMO--------------------->
+    <div class="promo">
+      <p class="promo__title">Давайте дружить, это выгодно</p>
+      <p class="promo__text">Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+
 </body>
 
 </html>
