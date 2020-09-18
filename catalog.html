@@ -17,7 +17,7 @@
   <header class="main__header">
     <nav class="main__nav">
       <a class="main__header__logo" href="index.html">
-        <img src="https://via.placeholder.com/160x65" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
       </a>
       <ul class="main__nav__list">
         <li class="main__nav__item nav__item--current">
@@ -59,8 +59,8 @@
       </div>
 
       <form action="https://echo.htmlacademy.ru/" method="post">
-        <div>
-          <p class="filter__title">Сетка:</p>
+        <fieldset>
+          <legend class="filter__title">Сетка:</legend>
           <label class="sort__grid">
             <input type="radio" name="grid">
             Адаптивная
@@ -73,10 +73,10 @@
             <input type="radio" name="grid">
             Резиновая
           </label>
-        </div>
+        </fieldset>
 
-        <div>
-          <p class="filter__title">Особенности:</p>
+        <fieldset>
+          <legend class="filter__title">Особенности:</legend>
           <label class="filter__features">
             <input type="checkbox">
             Слайдер
@@ -97,9 +97,9 @@
             <input type="checkbox">
             Корзина
           </label>
-        </div>
+        </fieldset>
 
-        <button class="filter__button" type="button">Показать</button>
+        <button class="filter__button" type="submit">Показать</button>
       </form>
 
     </section>
@@ -129,51 +129,63 @@
 
       <ul class="goods__list">
         <li class="goods__item">
-          <img class="goods__img" src="https://via.placeholder.com/358x578" width="358" height="578" alt="Sedona">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Sedona</a></h3>
-            <p class="goods__popup__text">Информационный сайт для туристов</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img class="goods__img" src="img/goods1.webp" width="358" height="578" alt="Sedona">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Sedona</a></h3>
+              <p class="goods__popup__text">Информационный сайт для туристов</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
         <li class="goods__item">
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Pink app">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Pink app</a></h3>
-            <p class="goods__popup__text">Продутовый лендинг приложений для IOS и Android</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img src="img/goods2.webp" width="358" height="578" alt="Pink app">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Pink app</a></h3>
+              <p class="goods__popup__text">Продутовый лендинг приложений для IOS и Android</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
         <li class="goods__item">
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Barbershop">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Barbershop</a></h3>
-            <p class="goods__popup__text">Сайт салона красоты. Для мужчин, да.</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img src="img/goods3.webp" width="358" height="578" alt="Barbershop">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Barbershop</a></h3>
+              <p class="goods__popup__text">Сайт салона красоты. Для мужчин, да.</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
         <li class="goods__item">
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Mishka">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Mishka</a></h3>
-            <p class="goods__popup__text">Интернет-магазин вязаных игрушек</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img src="img/goods4.webp" width="358" height="578" alt="Mishka">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Mishka</a></h3>
+              <p class="goods__popup__text">Интернет-магазин вязаных игрушек</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
         <li class="goods__item">
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="A plus">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">A plus</a></h3>
-            <p class="goods__popup__text">Лендинг курсов повышения квалификации</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img src="img/goods5.webp" width="358" height="578" alt="A plus">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">A plus</a></h3>
+              <p class="goods__popup__text">Лендинг курсов повышения квалификации</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
         <li class="goods__item">
-          <img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Кваст">
-          <div class="goods__popup">
-            <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Кваст</a></h3>
-            <p class="goods__popup__text">Промо-сайт производителя крафтового кваса</p>
-            <a class="goods__popup__button" href="">9 900 &#8381;</a>
+          <div class="goods__inner">
+            <img src="img/goods6.webp" width="358" height="578" alt="Кваст">
+            <div class="goods__popup">
+              <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Кваст</a></h3>
+              <p class="goods__popup__text">Промо-сайт производителя крафтового кваса</p>
+              <a class="goods__popup__button" href="">9 900 &#8381;</a>
+            </div>
           </div>
         </li>
       </ul>
@@ -216,16 +228,13 @@
 
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
-              height="81" alt="VK"></a>
+          <a class="social__link" href=""><img class="social__img" src="img/social-icon1.svg" alt="VK"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
-              height="81" alt="Facebook"></a>
+          <a class="social__link" href=""><img class="social__img" src="img/social-icon2.svg" alt="Facebook"></a>
         </li>
         <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="https://via.placeholder.com/81x81" width="81"
-              height="81" alt="Instagram"></a>
+          <a class="social__link" href=""><img class="social__img" src="img/social-icon3.svg" alt="Instagram"></a>
         </li>
       </ul>
     </section>
