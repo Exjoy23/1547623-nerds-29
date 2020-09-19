@@ -136,15 +136,15 @@ a {
 }
 
 .slide1 {
-  background-image: url(../img/slide1.webp);
+  background-image: url(../img/slide1.png);
 }
 
 .slide2 {
-  background-image: url(../img/slide2.webp);
+  background-image: url(../img/slide2.png);
 }
 
 .slide3 {
-  background-image: url(../img/slide3.webp);
+  background-image: url(../img/slide3.png);
 }
 
 .advantages__title {
@@ -207,15 +207,15 @@ a {
 }
 
 .service__pic1 {
-  background-image: url(../img/pic1.webp);
+  background-image: url(../img/pic1.jpg);
 }
 
 .service__pic2 {
-  background-image: url(../img/pic2.webp);
+  background-image: url(../img/pic2.jpg);
 }
 
 .service__pic3 {
-  background-image: url(../img/pic3.webp);
+  background-image: url(../img/pic3.jpg);
 }
 
 .services__flex {
@@ -382,17 +382,55 @@ a {
 
 /* CONTACTS */
 
+.contacts {
+  position: relative;
+}
+
+.contacts__inner {
+  display: flex;
+
+  flex-direction: column;
+
+  background-color: var(--basic-white);
+
+  width: 319px;
+  height: 308px;
+
+  position: absolute;
+
+  left: 140px;
+  top: 54px;
+}
+
 .contacts__title {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
 
+  margin-top: 49px;
+  margin-left: 50px;
+  margin-bottom: 0;
+
   text-transform: uppercase;
+}
+
+.contacts__adress {
+  margin-top: 22.71px;
+  margin-bottom: 0px;
+
+  width: 207px;
+}
+
+.contacts__phone {
+  margin-top: 19px;
+  margin-bottom: 37.29px;
 }
 
 .contacts__adress,
 .contacts__phone {
   line-height: 18px;
+
+  margin-left: 50px;
 
   color: var(--basic-gray);
 }
@@ -400,6 +438,8 @@ a {
 .contacts__link {
   font-weight: 500;
   line-height: 18px;
+
+  width: 219px;
 
   color: var(--basic-white);
 
@@ -409,11 +449,15 @@ a {
   padding: 17px 44px 15px;
 
   text-transform: uppercase;
+
+  margin-left: 50px;
 }
 
 /* SOCIAL */
 
 .social__list {
+  display: flex;
+
   list-style: none;
   padding-left: 0;
 }
@@ -575,10 +619,9 @@ a {
   position: relative;
 
   width: 358px;
-  height: 618px;
+  height: 620px;
 
-  
-  background-image: url(../img/bar-light.webp);
+  background-image: url(../img/bar-light.svg);
   background-position: center top;
   background-repeat: no-repeat;
 
@@ -599,12 +642,12 @@ a {
   overflow: hidden;
 }
 
-.goods__inner:hover {
+.goods__item:hover .goods__inner {
   border: 1px solid var(--basic-white);
 }
 
 .goods__item:hover {
-  background-image: url(../img/bar.webp);
+  background-image: url(../img/bar.svg);
   box-shadow: 0px 6px 15px var(--shadow-goods-color);
 }
 
@@ -613,13 +656,13 @@ a {
 
   background-color: var(--basic-light-gray);
 
-  width: 358px;
+  width: 356px;
   height: 231px;
 
   position: absolute;
 
-  left: 0px;
-  bottom: 0px;
+  left: 1px;
+  bottom: 1px;
 
   border-radius: 0 0 5px 5px;
 }
