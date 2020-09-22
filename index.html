@@ -15,35 +15,37 @@
 
   <!----------------------------HEADER----------------------------->
   <header class="main__header">
-    <nav class="main__nav">
-      <a class="main__header__logo">
-        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
-      </a>
-      <ul class="main__nav__list">
-        <li class="main__nav__item nav__item--current">
-          <a class="main__nav__link" href="index.html">Студия</a>
-        </li>
-        <li class="main__nav__item">
-          <a class="main__nav__link" href="blank.html">Клиенты</a>
-        </li>
-        <li class="main__nav__item">
-          <a class="main__nav__link" href="catalog.html">Магазин</a>
-        </li>
-        <li class="main__nav__item">
-          <a class="main__nav__link" href="blank.html">Контакты</a>
-        </li>
-      </ul>
+    <div class="container">
+      <nav class="main__nav">
+        <a class="main__header__logo">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+        </a>
+        <ul class="main__nav__list">
+          <li class="main__nav__item">
+            <a class="main__nav__link" href="index.html">Студия</a>
+          </li>
+          <li class="main__nav__item">
+            <a class="main__nav__link" href="blank.html">Клиенты</a>
+          </li>
+          <li class="main__nav__item">
+            <a class="main__nav__link" href="catalog.html">Магазин</a>
+          </li>
+          <li class="main__nav__item">
+            <a class="main__nav__link" href="blank.html">Контакты</a>
+          </li>
+        </ul>
 
-      <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="blank.html">Корзина</a></li>
-      </ul>
-    </nav>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="blank.html">Корзина</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
 
 
   <!-----------------------------MAIN------------------------------>
-  <main class="container">
+  <main class="main__container">
     <h1 class="hidden">Дизайн-студия «Nerds»</h1>
 
 
@@ -52,27 +54,47 @@
     <section class="advantages">
       <h2 class="hidden">Преимущества</h2>
 
-      <ul class="advantages__list">
-        <li class="advantages__item slide1">
-          <h3 class="advantages__title">Долго, дорого,<br>скрупулезно.</h3>
-          <p class="advantages__text">Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-          <a class="advantages__link button" href="">Узнать больше</a>
-        </li>
+      <div class="container advantages__wrapper">
+        <ul class="advantages__list">
+          <li class="advantages__item slide1">
+            <h3 class="advantages__title">Долго, дорого,<br>скрупулезно.</h3>
+            <p class="advantages__text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
+            </p>
+            <a class="advantages__link button" href="">Узнать больше</a>
+          </li>
 
-        <li class="advantages__item slide2">
-          <h3 class="advantages__title">Любим математику как никто другой</h3>
-          <p class="advantages__text">Никакого креатива, только математические формулы для расчета идеальных пропорций
-          </p>
-          <a class="advantages__link button" href="">Узнать больше</a>
-        </li>
+          <li class="advantages__item slide2 hidden">
+            <h3 class="advantages__title">Любим математику как никто другой</h3>
+            <p class="advantages__text slide2__text">Никакого креатива, только математические формулы для расчета
+              идеальных пропорций
+            </p>
+            <a class="advantages__link button" href="">Узнать больше</a>
+          </li>
 
-        <li class="advantages__item slide3">
-          <h3 class="advantages__title">Только ночь, только харкор</h3>
-          <p class="advantages__text">Работать днем, как все? Мы против этого.
-            Ближе к полуночи работа только начинается</p>
-          <a class="advantages__link button" href="">Узнать больше</a>
-        </li>
-      </ul>
+          <li class="advantages__item slide3 hidden">
+            <h3 class="advantages__title">Только ночь, только хардкор</h3>
+            <p class="advantages__text slide3__text">Работать днем, как все? Мы против этого.
+              Ближе к полуночи работа только начинается</p>
+            <a class="advantages__link button" href="">Узнать больше</a>
+          </li>
+        </ul>
+
+        <div class="advantages__slider">
+          <label class="advantages__label">
+            <input class="hidden radio" type="radio" name="radio" onclick="slider1()" checked>
+            <span class="radio__inner"></span>
+          </label>
+          <label class="advantages__label">
+            <input class="hidden radio" type="radio" name="radio" onclick="slider2()">
+            <span class="radio__inner radio2"></span>
+          </label>
+          <label class="advantages__label">
+            <input class="hidden radio" type="radio" name="radio" onclick="slider3()">
+            <span class="radio__inner radio3"></span>
+          </label>
+        </div>
+
+      </div>
     </section>
 
 
@@ -80,23 +102,25 @@
     <!-------------------SERVICES-------------------->
     <section class="services">
       <h2 class="hidden">Предоставляемые услуги</h2>
-      <div class="services__flex">
-        <div class="services__content service__pic1">
-          <h3 class="services__content__title">Веб-сайты</h3>
-          <p class="services__content__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a class="services__content__link button button-red" href="">Заказать</a>
-        </div>
+      <div class="container border__bottom">
+        <div class="services__wrapper">
+          <div class="services__content service__pic1">
+            <h3 class="services__content__title">Веб-сайты</h3>
+            <p class="services__content__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            <a class="services__content__link button button-red" href="">Заказать</a>
+          </div>
 
-        <div class="services__content service__pic2">
-          <h3 class="services__content__title">Приложения</h3>
-          <p class="services__content__text">Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a class="services__content__link button button-green" href="">Заказать</a>
-        </div>
+          <div class="services__content service__pic2">
+            <h3 class="services__content__title">Приложения</h3>
+            <p class="services__content__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+            <a class="services__content__link button button-green" href="">Заказать</a>
+          </div>
 
-        <div class="services__content service__pic3">
-          <h3 class="services__content__title">Презентации</h3>
-          <p class="services__content__text">Вы даже не подозреваете насколько вы изумительны!</p>
-          <a class="services__content__link button button-yellow" href="">Заказать</a>
+          <div class="services__content service__pic3">
+            <h3 class="services__content__title">Презентации</h3>
+            <p class="services__content__text">Вы даже не подозреваете насколько вы изумительны!</p>
+            <a class="services__content__link button button-yellow" href="">Заказать</a>
+          </div>
         </div>
       </div>
     </section>
@@ -107,26 +131,36 @@
     <section class="about">
       <h2 class="hidden">О нас</h2>
 
-      <div class="about__desc">
-        <p class="about__desc__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара</p>
-        <p class="about__desc__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
-          превыше креатива. Работаем не покладая рук, как роботы.</p>
-        <p class="about__desc__title">Выполняем заказы на разработку:</p>
-        <ul class="about__desc__list">
-          <li class="about__desc__item">Веб-сайтов любой сложности</li>
-          <li class="about__desc__item">Мобильных приложений для IOS и Android</li>
-          <li class="about__desc__item">Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
-      </div>
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__desc">
+            <p class="about__desc__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+            <p class="about__desc__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
+              превыше креатива. Работаем не покладая рук, как роботы.</p>
+            <p class="about__desc__title">Выполняем заказы на разработку:</p>
+            <ul class="about__desc__list">
+              <li class="about__desc__item">Веб-сайтов любой сложности</li>
+              <li class="about__desc__item">Мобильных приложений для IOS и Android</li>
+              <li class="about__desc__item">Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
+          </div>
 
-      <div class="about__content">
-        <img class="about__content__img" src="img/logo2.jpg" width="360" height="208" alt="Лого дизайн-студии">
-        <p class="about__content__title">С 2004 года любим точность во всем:</p>
-        <ul class="about__content__list">
-          <li class="about__content__item"><span class="about__content__level">146</span> Уровень самоотдачи</li>
-          <li class="about__content__item"><span class="about__content__level">100</span> Соблюдение сроков</li>
-          <li class="about__content__item"><span class="about__content__level">50</span> Минимальная предоплата</li>
-        </ul>
+          <div class="about__content">
+            <img class="about__content__img" src="img/logo2.jpg" width="360" height="208" alt="Лого дизайн-студии">
+            <p class="about__content__title">С 2004 года любим точность во всем:</p>
+            <ul class="about__content__list">
+              <li class="about__content__item"><span class="about__content__level">146</span>
+                <p class="about__content__text">Уровень самоотдачи</p>
+              </li>
+              <li class="about__content__item"><span class="about__content__level">100</span>
+                <p class="about__content__text">Соблюдение сроков</p>
+              </li>
+              <li class="about__content__item"><span class="about__content__level">50</span>
+                <p class="about__content__text">Минимальная предоплата</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -136,24 +170,26 @@
     <section class="clients">
       <h2 class="hidden">Наши клиенты</h2>
 
-      <ul class="clients__list">
-        <li class="clients__item">
-          <a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="clients__img"
-              src="img/clients1.png" width="199" height="68" alt="html academy"></a>
-        </li>
-        <li class="clients__item">
-          <a class="clients__link" href=""><img class="clients__img" src="img/clients2.png" width="209" height="90"
-              alt="borodinski"></a>
-        </li>
-        <li class="clients__item">
-          <a class="clients__link" href=""><img class="clients__img" src="img/clients3.png" width="185" height="52"
-              alt="Pink"></a>
-        </li>
-        <li class="clients__item">
-          <a class="clients__link" href=""><img class="clients__img" src="img/clients4.png" width="173" height="84"
-              alt="Mishka"></a>
-        </li>
-      </ul>
+      <div class="container">
+        <ul class="clients__list">
+          <li class="clients__item clients__item__position1">
+            <a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="clients__img"
+                src="img/clients1.png" width="199" height="68" alt="html academy"></a>
+          </li>
+          <li class="clients__item clients__item__position2">
+            <a class="clients__link" href=""><img class="clients__img" src="img/clients2.png" width="209" height="90"
+                alt="borodinski"></a>
+          </li>
+          <li class="clients__item clients__item__position3">
+            <a class="clients__link" href=""><img class="clients__img" src="img/clients3.png" width="185" height="52"
+                alt="Pink"></a>
+          </li>
+          <li class="clients__item clients__item__position4">
+            <a class="clients__link" href=""><img class="clients__img" src="img/clients4.png" width="173" height="84"
+                alt="Mishka"></a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 
@@ -168,14 +204,16 @@
     <section class="contacts">
       <h2 class="hidden">Контактная информация</h2>
 
-      <div class="contacts__inner">
-        <p class="contacts__title">Nёrds design studio</p>
-        <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-        <a class="contacts__link button" href="">Напишите нам</a>
-      </div>
+      <div class="contacts__wrapper">
+        <div class="contacts__inner">
+          <p class="contacts__title">Nёrds design studio</p>
+          <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+          <a class="contacts__link button" href="">Напишите нам</a>
+        </div>
 
-      <img class="contacts__img" src="img/map.jpg" width="1440" height="416" alt="Местоположение на карте">
+        <img class="contacts__img" src="img/map.jpg" width="1440" height="416" alt="Местоположение на карте">
+      </div>
     </section>
 
 
@@ -184,28 +222,33 @@
     <section class="social">
       <h2 class="hidden">Наши контакты</h2>
 
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="img/social-icon1.svg" alt="VK"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="img/social-icon2.svg" alt="Facebook"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href=""><img class="social__img" src="img/social-icon3.svg" alt="Instagram"></a>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="social__wrapper">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href=""><img class="social__img" src="img/social-icon1.svg" alt="VK"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href=""><img class="social__img" src="img/social-icon2.svg" alt="Facebook"></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href=""><img class="social__img" src="img/social-icon3.svg" alt="Instagram"></a>
+            </li>
+          </ul>
+
+
+
+          <!---------------------PROMO--------------------->
+          <div class="promo">
+            <p class="promo__title">Давайте дружить, это выгодно!</p>
+            <p class="promo__text">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </div>
+      </div>
     </section>
-
-
-
-    <!---------------------PROMO--------------------->
-    <div class="promo">
-      <p class="promo__title">Давайте дружить, это выгодно</p>
-      <p class="promo__text">Скидка 10% для друзей из социальных сетей.</p>
-    </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>
