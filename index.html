@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body data-id-page="index" class="page__body">
 
 
 
@@ -22,21 +22,21 @@
         </a>
         <ul class="main__nav__list">
           <li class="main__nav__item">
-            <a class="main__nav__link" href="index.html">Студия</a>
+            <a class="main__nav__link" data-id-nav="index" href="index.html">Студия</a>
           </li>
           <li class="main__nav__item">
-            <a class="main__nav__link" href="blank.html">Клиенты</a>
+            <a class="main__nav__link" data-id-nav="clients" href="clients.html">Клиенты</a>
           </li>
           <li class="main__nav__item">
-            <a class="main__nav__link" href="catalog.html">Магазин</a>
+            <a class="main__nav__link" data-id-nav="catalog" data-id-nav="catalog" href="catalog.html">Магазин</a>
           </li>
           <li class="main__nav__item">
-            <a class="main__nav__link" href="blank.html">Контакты</a>
+            <a class="main__nav__link" data-id-nav="contacts" href="contacts.html">Контакты</a>
           </li>
         </ul>
 
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="blank.html">Корзина</a></li>
+          <li class="nav__item"><a class="nav__link" data-id-nav="cart" href="cart.html">Корзина</a></li>
         </ul>
       </nav>
     </div>
@@ -102,25 +102,24 @@
     <!-------------------SERVICES-------------------->
     <section class="services">
       <h2 class="hidden">Предоставляемые услуги</h2>
-      <div class="container border__bottom">
-        <div class="services__wrapper">
-          <div class="services__content service__pic1">
-            <h3 class="services__content__title">Веб-сайты</h3>
-            <p class="services__content__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a class="services__content__link button button-red" href="">Заказать</a>
-          </div>
 
-          <div class="services__content service__pic2">
-            <h3 class="services__content__title">Приложения</h3>
-            <p class="services__content__text">Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a class="services__content__link button button-green" href="">Заказать</a>
-          </div>
+      <div class="container services__wrapper border__bottom">
+        <div class="services__content service__pic1">
+          <h3 class="services__content__title">Веб-сайты</h3>
+          <p class="services__content__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="services__content__link button button-red" href="">Заказать</a>
+        </div>
 
-          <div class="services__content service__pic3">
-            <h3 class="services__content__title">Презентации</h3>
-            <p class="services__content__text">Вы даже не подозреваете насколько вы изумительны!</p>
-            <a class="services__content__link button button-yellow" href="">Заказать</a>
-          </div>
+        <div class="services__content service__pic2">
+          <h3 class="services__content__title">Приложения</h3>
+          <p class="services__content__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a class="services__content__link button button-green" href="">Заказать</a>
+        </div>
+
+        <div class="services__content service__pic3">
+          <h3 class="services__content__title">Презентации</h3>
+          <p class="services__content__text">Вы даже не подозреваете насколько вы изумительны!</p>
+          <a class="services__content__link button button-yellow" href="">Заказать</a>
         </div>
       </div>
     </section>
@@ -131,8 +130,7 @@
     <section class="about">
       <h2 class="hidden">О нас</h2>
 
-      <div class="container">
-        <div class="about__wrapper">
+      <div class="container about__wrapper">
           <div class="about__desc">
             <p class="about__desc__slogan">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
             <p class="about__desc__text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет
@@ -161,7 +159,6 @@
             </ul>
           </div>
         </div>
-      </div>
     </section>
 
 
@@ -222,8 +219,7 @@
     <section class="social">
       <h2 class="hidden">Наши контакты</h2>
 
-      <div class="container">
-        <div class="social__wrapper">
+      <div class="container social__wrapper">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link" href=""><img class="social__img" src="img/social-icon1.svg" alt="VK"></a>
@@ -244,7 +240,6 @@
             <p class="promo__text">Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </div>
-      </div>
     </section>
   </footer>
 
