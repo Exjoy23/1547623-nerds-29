@@ -1,6 +1,6 @@
-let slideOne = document.querySelector('.slide1');
-let slideTwo = document.querySelector('.slide2');
-let slideThree = document.querySelector('.slide3');
+let slideOne = document.querySelector('.advantages__item:nth-child(1)');
+let slideTwo = document.querySelector('.advantages__item:nth-child(2)');
+let slideThree = document.querySelector('.advantages__item:nth-child(3)');
 
 function slider1() {
   slideOne.classList.remove('hidden');
