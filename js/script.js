@@ -1,29 +1,51 @@
-let slideOne = document.querySelector('.advantages__item:nth-child(1)');
-let slideTwo = document.querySelector('.advantages__item:nth-child(2)');
-let slideThree = document.querySelector('.advantages__item:nth-child(3)');
+'use strict';
+
+function getShow(selector) {
+  document.querySelector(selector).classList.add('current');
+}
+
+function getHide(selector) {
+  document.querySelector(selector).classList.remove('current');
+}
 
 function slider1() {
-  slideOne.classList.remove('hidden');
-  slideTwo.classList.add('hidden');
-  slideThree.classList.add('hidden');
+  getShow('.advantages__slider__button:nth-child(1)');
+  getHide('.advantages__slider__button:nth-child(2)');
+  getHide('.advantages__slider__button:nth-child(3)');
+  getShow('.advantages__item:nth-child(1)');
+  getHide('.advantages__item:nth-child(2)');
+  getHide('.advantages__item:nth-child(3)');
 }
 
 function slider2() {
-  slideOne.classList.add('hidden');
-  slideTwo.classList.remove('hidden');
-  slideThree.classList.add('hidden');
+  getShow('.advantages__slider__button:nth-child(2)');
+  getHide('.advantages__slider__button:nth-child(1)');
+  getHide('.advantages__slider__button:nth-child(3)');
+  getShow('.advantages__item:nth-child(2)');
+  getHide('.advantages__item:nth-child(1)');
+  getHide('.advantages__item:nth-child(3)');
 }
 
 function slider3() {
-  slideOne.classList.add('hidden');
-  slideTwo.classList.add('hidden');
-  slideThree.classList.remove('hidden');
+  getShow('.advantages__slider__button:nth-child(3)');
+  getHide('.advantages__slider__button:nth-child(2)');
+  getHide('.advantages__slider__button:nth-child(1)');
+  getShow('.advantages__item:nth-child(3)');
+  getHide('.advantages__item:nth-child(2)');
+  getHide('.advantages__item:nth-child(1)');
 }
 
-function openPopup() {
-  document.querySelector('.contacts__popup').classList.remove('hidden');
-}
+const button1 = document.querySelector('#button1');
+button1.addEventListener('click', () => slider1());
 
-function closePopup() {
-  document.querySelector('.contacts__popup').classList.add('hidden');
-}
+const button2 = document.querySelector('#button2');
+button2.addEventListener('click', () => slider2());
+
+const button3 = document.querySelector('#button3');
+button3.addEventListener('click', () => slider3());
+
+const buttonOpenPopup = document.querySelector('#open__popup');
+buttonOpenPopup.addEventListener('click', () => getShow('.contacts__popup'));
+
+const buttonClosePopup = document.querySelector('#close__popup');
+buttonClosePopup.addEventListener('click', () => getHide('.contacts__popup'));

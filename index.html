@@ -58,14 +58,14 @@
 
       <div class="container advantages__wrapper">
         <ul class="advantages__list">
-          <li class="advantages__item">
+          <li class="advantages__item current">
             <h3 class="advantages__title">Долго, дорого,<br>скрупулезно.</h3>
             <p class="advantages__text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
             </p>
             <a class="advantages__link button" href="">Узнать больше</a>
           </li>
 
-          <li class="advantages__item hidden">
+          <li class="advantages__item">
             <h3 class="advantages__title">Любим математику как никто другой</h3>
             <p class="advantages__text slide2__text">Никакого креатива, только математические формулы для расчета
               идеальных пропорций
@@ -73,7 +73,7 @@
             <a class="advantages__link button" href="">Узнать больше</a>
           </li>
 
-          <li class="advantages__item hidden">
+          <li class="advantages__item">
             <h3 class="advantages__title">Только ночь, только хардкор</h3>
             <p class="advantages__text slide3__text">Работать днем, как все? Мы против этого.
               Ближе к полуночи работа только начинается</p>
@@ -82,18 +82,9 @@
         </ul>
 
         <div class="advantages__slider">
-          <label class="advantages__label">
-            <input class="hidden radio" type="radio" name="radio" onclick="slider1()" checked>
-            <span class="radio__inner"></span>
-          </label>
-          <label class="advantages__label">
-            <input class="hidden radio" type="radio" name="radio" onclick="slider2()">
-            <span class="radio__inner radio2"></span>
-          </label>
-          <label class="advantages__label">
-            <input class="hidden radio" type="radio" name="radio" onclick="slider3()">
-            <span class="radio__inner radio3"></span>
-          </label>
+          <button class="advantages__slider__button current" id="button1" type="button"></button>
+          <button class="advantages__slider__button" id="button2" type="button"></button>
+          <button class="advantages__slider__button" id="button3" type="button"></button>
         </div>
 
       </div>
@@ -208,12 +199,12 @@
           <p class="contacts__title">Nёrds design studio</p>
           <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <a class="contacts__link button" onclick="openPopup()">Напишите нам</a>
+          <button class="contacts__link button" id="open__popup" type="button">Напишите нам</button>
         </div>
 
 
-        <div class="contacts__popup hidden">
-          <form class="contacts__popup__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="contacts__popup">
+          <form class="contacts__popup__form" action="https://echo.htmlacademy.ru/" method="get">
             <p class="contacts__popup__title">Напишите нам</p>
             <label class="contacts__popup__input__name">
               <span class="contacts__popup__name__title">Ваше имя:</span>
@@ -228,7 +219,7 @@
               <textarea class="contacts__popup__textarea" cols="30" rows="10">В свободной форме</textarea>
             </label>
             <button class="contacts__popup__button button" type="submit">Отправить</button>
-            <button class="contacts__popup__button__close" type="button" onclick="closePopup()"></button>
+            <button class="contacts__popup__button__close" id="close__popup" type="button" ></button>
           </form>
         </div>
       </div>
