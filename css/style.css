@@ -7,6 +7,7 @@
   --active-btn-red: #D7373B;
   --active-btn-yellow: #E5A722;
   --active-gradient: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  --active-logo-gray: #A6A6A6;
   --active-white: rgba(255, 255, 255, 0.3);
   --basic-black: #000000;
   --basic-btn-gray: #EEEEEE;
@@ -19,6 +20,7 @@
   --basic-gray: #666666;
   --basic-light-gray: #EEEEEE;
   --basic-white: #FFFFFF;
+  --box-shadow-toggle: rgba(0, 0, 0, 0.15);
   --goods-border: rgba(0, 0, 0, 0.1);
   --hover-btn-gray: #DFDFDF;
   --hover-btn-green: #00BC6C;
@@ -129,11 +131,16 @@ a {
   padding-top: 20px;
 }
 
-.main__header__logo {
+.main__header__logo,
+.main__header__logo__index {
   margin-top: 28.5px;
   margin-right: 202px;
 
   width: 160px;
+}
+
+.main__header__logo:active path {
+  fill: var(--active-logo-gray);
 }
 
 .main__nav__list {
@@ -332,6 +339,8 @@ a {
   position: absolute;
   bottom: 91px;
   left: 556px;
+
+  user-select: none;
 }
 
 .advantages__slider__button {
@@ -801,9 +810,9 @@ a {
 }
 
 .contacts__popup {
-  position: absolute;
-  bottom: -455px;
-  left: 120px;
+  position: fixed;
+  top: 18%;
+  left: 24.8%;
   z-index: 3;
 
   display: none;
@@ -863,10 +872,13 @@ a {
 
   border: none;
 
+  background-color: transparent;
   background-image: url(../img/button-close.svg);
   background-repeat: no-repeat;
 
   opacity: 0.3;
+
+  cursor: pointer;
 
   justify-self: end;
 }
@@ -958,6 +970,8 @@ a {
 
 .contacts__popup__button {
   grid-area: contacts__popup__button;
+
+  cursor: pointer;
 }
 
 .contacts__popup__name,
@@ -1190,6 +1204,8 @@ a {
   border-radius: 50%;
 
   background-color: var(--range-toggle);
+
+  box-shadow: 0 2px 1px var(--box-shadow-toggle);
 
   cursor: pointer;
 }
@@ -1478,7 +1494,7 @@ a {
   opacity: 1;
 }
 
-.sort__item--current {
+.sort__item.current {
   opacity: 1;
 }
 
