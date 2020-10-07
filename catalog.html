@@ -34,7 +34,7 @@
             <a class="main__nav__link" href="clients.html">Клиенты</a>
           </li>
           <li class="main__nav__item">
-            <a class="main__nav__link current__link" href="catalog.html">Магазин</a>
+            <a class="main__nav__link current" href="catalog.html">Магазин</a>
           </li>
           <li class="main__nav__item">
             <a class="main__nav__link" href="contacts.html">Контакты</a>
@@ -63,7 +63,7 @@
 
       <section class="filter">
 
-        <h2 class="hidden">Фильтр товаров</h2>
+        <h2 class="visually__hidden">Фильтр товаров</h2>
 
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter__range">
@@ -88,15 +88,15 @@
           <fieldset class="filter__group__grid">
             <legend class="filter__grid__title filter__title">Сетка:</legend>
             <label class="filter__grid">
-              <input class="hidden radio__grid" type="radio" name="grid" checked>
+              <input class="visually__hidden radio__grid" type="radio" name="grid" checked>
               <span class="filter__radio">Адаптивная</span>
             </label>
             <label class="filter__grid">
-              <input class="hidden radio__grid" type="radio" name="grid">
+              <input class="visually__hidden radio__grid" type="radio" name="grid">
               <span class="filter__radio">Фиксированная</span>
             </label>
             <label class="filter__grid">
-              <input class="hidden radio__grid" type="radio" name="grid">
+              <input class="visually__hidden radio__grid" type="radio" name="grid">
               <span class="filter__radio">Резиновая</span>
             </label>
           </fieldset>
@@ -104,23 +104,23 @@
           <fieldset class="filter__group__features">
             <legend class="filter__feautures__title filter__title">Особенности:</legend>
             <label class="filter__features">
-              <input class="hidden checkbox__features" type="checkbox" checked>
+              <input class="visually__hidden checkbox__features" type="checkbox" checked>
               <span class="filter__checkbox">Слайдер</span>
             </label>
             <label class="filter__features">
-              <input class="hidden checkbox__features" type="checkbox">
+              <input class="visually__hidden checkbox__features" type="checkbox">
               <span class="filter__checkbox">Блок преимуществ</span>
             </label>
             <label class="filter__features">
-              <input class="hidden checkbox__features" type="checkbox" checked>
+              <input class="visually__hidden checkbox__features" type="checkbox" checked>
               <span class="filter__checkbox">Новости</span>
             </label>
             <label class="filter__features">
-              <input class="hidden checkbox__features" type="checkbox">
+              <input class="visually__hidden checkbox__features" type="checkbox">
               <span class="filter__checkbox">Галерея</span>
             </label>
             <label class="filter__features">
-              <input class="hidden checkbox__features" type="checkbox">
+              <input class="visually__hidden checkbox__features" type="checkbox">
               <span class="filter__checkbox">Корзина</span>
             </label>
           </fieldset>
@@ -135,7 +135,7 @@
       <!---------------------SORT---------------------->
       <section class="sort">
 
-        <h2 class="hidden">Сортировка товаров</h2>
+        <h2 class="visually__hidden">Сортировка товаров</h2>
 
         <p class="sort__title">Сортировать:</p>
         <ul class="sort__list">
@@ -153,14 +153,10 @@
       <!---------------------GOODS--------------------->
       <section class="goods">
 
-        <h2 class="hidden">Товары</h2>
+        <h2 class="visually__hidden">Товары</h2>
 
         <ul class="goods__list">
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
               <img class="goods__img" src="img/goods1.jpg" width="358" height="578" alt="Sedona">
               <div class="goods__popup">
@@ -171,12 +167,8 @@
             </div>
           </li>
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
-              <img src="img/goods2.jpg" width="358" height="578" alt="Pink app">
+              <img class="goods__img" src="img/goods2.jpg" width="358" height="578" alt="Pink app">
               <div class="goods__popup">
                 <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Pink app</a></h3>
                 <p class="goods__popup__text">Продутовый лендинг приложений для IOS и Android</p>
@@ -185,12 +177,8 @@
             </div>
           </li>
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
-              <img src="img/goods3.jpg" width="358" height="578" alt="Barbershop">
+              <img class="goods__img" src="img/goods3.jpg" width="358" height="578" alt="Barbershop">
               <div class="goods__popup">
                 <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Barbershop</a></h3>
                 <p class="goods__popup__text">Сайт салона красоты.<br>Для мужчин, да.</p>
@@ -199,12 +187,8 @@
             </div>
           </li>
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
-              <img src="img/goods4.jpg" width="358" height="578" alt="Mishka">
+              <img class="goods__img" src="img/goods4.jpg" width="358" height="578" alt="Mishka">
               <div class="goods__popup">
                 <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Mishka</a></h3>
                 <p class="goods__popup__text">Интернет-магазин<br>вязаных игрушек</p>
@@ -213,12 +197,8 @@
             </div>
           </li>
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
-              <img src="img/goods5.jpg" width="358" height="578" alt="A plus">
+              <img class="goods__img" src="img/goods5.jpg" width="358" height="578" alt="A plus">
               <div class="goods__popup">
                 <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">A plus</a></h3>
                 <p class="goods__popup__text">Лендинг курсов повышения квалификации</p>
@@ -227,12 +207,8 @@
             </div>
           </li>
           <li class="goods__item">
-            <div class="goods__bar"><svg width="360" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M4 0h352c2.2 0 4 1.8 4 4v36H0V4c0-2.2 1.8-4 4-4zm12.93 23.5a7 7 0 1012.12-7 7 7 0 00-12.12 7zM46 27a7 7 0 110-14 7 7 0 010 14zm16.95-3.5a7 7 0 1012.13-7 7 7 0 00-12.13 7z"
-                  fill="#4D4D4D" /></svg></div>
             <div class="goods__inner">
-              <img src="img/goods6.jpg" width="358" height="578" alt="Кваст">
+              <img class="goods__img" src="img/goods6.jpg" width="358" height="578" alt="Кваст">
               <div class="goods__popup">
                 <h3 class="goods__popup__title"><a class="goods__popup__link" href="blank.html">Кваст</a></h3>
                 <p class="goods__popup__text">Промо-сайт производителя крафтового кваса</p>
@@ -243,7 +219,7 @@
         </ul>
 
         <ul class="goods__pagination__list">
-          <li class="goods__pagination__item"><a class="goods__pagination__link goods__pagination__link--current"
+          <li class="goods__pagination__item"><a class="goods__pagination__link current"
               href="">1</a></li>
           <li class="goods__pagination__item"><a class="goods__pagination__link" href="">2</a></li>
           <li class="goods__pagination__item"><a class="goods__pagination__link" href="">3</a></li>
@@ -263,14 +239,14 @@
 
     <!-------------------CONTACTS-------------------->
     <section class="contacts">
-      <h2 class="hidden">Контактная информация</h2>
+      <h2 class="visually__hidden">Контактная информация</h2>
 
       <div class="container contacts__wrapper">
         <div class="contacts__inner">
           <p class="contacts__title">Nёrds design studio</p>
           <p class="contacts__adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-          <button class="contacts__link button" id="open__popup" type="button">Напишите нам</button>
+          <a href="blank.html" class="contacts__link button" id="open__popup">Напишите нам</a>
         </div>
 
 
@@ -307,7 +283,7 @@
 
     <!--------------------SOCIAL--------------------->
     <section class="social">
-      <h2 class="hidden">Наши контакты</h2>
+      <h2 class="visually__hidden">Наши контакты</h2>
 
       <div class="container social__wrapper">
         <ul class="social__list">
