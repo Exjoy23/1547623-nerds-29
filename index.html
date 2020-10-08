@@ -64,14 +64,14 @@
 
       <div class="container advantages__wrapper">
         <ul class="advantages__list">
-          <li class="advantages__item current">
+          <li class="advantages__item">
             <h3 class="advantages__title">Долго, дорого,<br>скрупулезно.</h3>
             <p class="advantages__text">Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
             </p>
             <a class="advantages__link button" href="">Узнать больше</a>
           </li>
 
-          <li class="advantages__item">
+          <li class="advantages__item visually__hidden">
             <h3 class="advantages__title">Любим математику как никто другой</h3>
             <p class="advantages__text slide2__text">Никакого креатива, только математические формулы для расчета
               идеальных пропорций
@@ -79,7 +79,7 @@
             <a class="advantages__link button" href="">Узнать больше</a>
           </li>
 
-          <li class="advantages__item">
+          <li class="advantages__item visually__hidden">
             <h3 class="advantages__title">Только ночь, только хардкор</h3>
             <p class="advantages__text slide3__text">Работать днем, как все? Мы против этого.
               Ближе к полуночи работа только начинается</p>
@@ -146,13 +146,16 @@
           <img class="about__content__img" src="img/logo2.jpg" width="360" height="208" alt="Лого дизайн-студии">
           <p class="about__content__title">С 2004 года любим точность во всем:</p>
           <ul class="about__content__list">
-            <li class="about__content__item"><span class="about__content__level">146</span>
+            <li class="about__content__item">
+              <span class="about__content__level">146</span>
               <p class="about__content__text">Уровень самоотдачи</p>
             </li>
-            <li class="about__content__item"><span class="about__content__level">100</span>
+            <li class="about__content__item">
+              <span class="about__content__level">100</span>
               <p class="about__content__text">Соблюдение сроков</p>
             </li>
-            <li class="about__content__item"><span class="about__content__level">50</span>
+            <li class="about__content__item">
+              <span class="about__content__level">50</span>
               <p class="about__content__text">Минимальная предоплата</p>
             </li>
           </ul>
@@ -169,20 +172,24 @@
       <div class="container">
         <ul class="clients__list">
           <li class="clients__item">
-            <a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="clients__img"
-                src="img/clients1.svg" width="199" height="68" alt="html academy"></a>
+            <a class="clients__link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="clients__img" src="img/clients1.svg" width="199" height="68" alt="html academy">
+            </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link" href=""><img class="clients__img" src="img/clients2.png" width="209" height="90"
-                alt="borodinski"></a>
+            <a class="clients__link" href="">
+              <img class="clients__img" src="img/clients2.png" width="209" height="90" alt="borodinski">
+            </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link" href=""><img class="clients__img" src="img/clients3.png" width="185" height="52"
-                alt="Pink"></a>
+            <a class="clients__link" href="">
+              <img class="clients__img" src="img/clients3.png" width="185" height="52" alt="Pink">
+            </a>
           </li>
           <li class="clients__item">
-            <a class="clients__link" href=""><img class="clients__img" src="img/clients4.png" width="173" height="84"
-                alt="Mishka"></a>
+            <a class="clients__link" href="">
+              <img class="clients__img" src="img/clients4.png" width="173" height="84" alt="Mishka">
+            </a>
           </li>
         </ul>
       </div>
@@ -209,8 +216,8 @@
         </div>
 
 
-        <div class="contacts__popup">
-          <form class="contacts__popup__form" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="contacts__popup visually__hidden">
+          <form class="contacts__popup__form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="contacts__popup__title">Напишите нам</p>
             <label class="contacts__popup__input__name">
               <span class="contacts__popup__name__title">Ваше имя:</span>
