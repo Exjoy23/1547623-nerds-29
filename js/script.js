@@ -56,19 +56,52 @@ if (document.querySelector('#index')) {
     removeVisuallyHidden(sliderItem[2]);
     addVisuallyHidden(sliderItem[0], sliderItem[1]);
   });
+
+  const slides = document.querySelectorAll('.advantages__item');
+  const sliderButtons = document.querySelectorAll('.advantages__slider__button');
+
+  const btns = document.querySelectorAll('.advantages__link');
+  btns.forEach((item, i) => {
+    item.addEventListener('focus', () => {
+      slides.forEach(item => {
+        item.classList.add('visually__hidden');
+      });
+      document.querySelector(`.advantages__item:nth-child(${i + 1})`).classList.remove('visually__hidden');
+      sliderButtons.forEach(item => {
+        item.classList.remove('current');
+      });
+      sliderButtons[i].classList.add('current');
+    });
+  });
 }
+
+const popup = document.querySelector('.contacts__popup');
 
 const buttonOpenPopup = document.querySelector('#open__popup');
 buttonOpenPopup.addEventListener('click', (event) => {
   event.preventDefault();
-  document.querySelector(
-    '.contacts__popup').classList.remove('visually__hidden');
+  getShow('.contacts__popup');
+  popup.classList.add('show');
+  setTimeout(clearShow, 1000);
 });
+
+function getHidePopup() {
+  getHide('.contacts__popup');
+}
+
+function clearHide() {
+  popup.classList.remove('hide');
+}
+
+function clearShow() {
+  popup.classList.remove('show');
+}
 
 const buttonClosePopup = document.querySelector('#close__popup');
 buttonClosePopup.addEventListener('click', () => {
-  document.querySelector(
-    '.contacts__popup').classList.add('visually__hidden');
+  popup.classList.add('hide');
+  setTimeout(getHidePopup, 1000);
+  setTimeout(clearHide, 1000);
 });
 
 if (document.querySelector('#catalog')) {
