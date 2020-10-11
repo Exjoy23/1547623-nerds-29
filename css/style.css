@@ -1576,8 +1576,6 @@ a {
 .goods__item {
   position: relative;
 
-/* margin-bottom: 31px; */
-
   padding-top: 40px;
 
   width: 360px;
@@ -1633,6 +1631,10 @@ a {
 }
 
 .goods__item:hover .goods__popup {
+  opacity: 1;
+}
+
+.goods__popup.current {
   opacity: 1;
 }
 
@@ -1718,13 +1720,11 @@ a {
 .goods__pagination__list {
   display: flex;
 
-  justify-content: space-between;
-
   margin: 0;
   margin-bottom: 60px;
   padding: 0;
 
-  width: 443px;
+  min-width: 443px;
 
   list-style: none;
 
@@ -1738,31 +1738,29 @@ a {
 
   justify-content: center;
 
+  margin-right: 11px;
+
   min-width: 50px;
   height: 50px;
 }
 
 .goods__pagination__link,
 .goods__next {
-  padding-top: 3px;
+  display: flex;
 
-  width: 50px;
-  height: 50px;
+  justify-content: center;
+
+  padding: 15px 20.5px 17px;
 
   border-radius: 3px;
 
   background-color: var(--basic-btn-gray);
 
   color: inherit;
-
-  vertical-align: middle;
-  text-align: center;
-
-  line-height: 50px;
 }
 
 .goods__next {
-  width: 260px;
+  min-width: 260px;
 }
 
 .goods__pagination__link:hover,
@@ -1778,7 +1776,7 @@ a {
 }
 
 .goods__pagination__link.current {
-  padding-top: 0;
+  padding: 12px 17.5px 14px;
 
   border: 3px solid var(--pagination-border);
   border-radius: 3px;
