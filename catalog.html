@@ -68,11 +68,12 @@
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter__range">
             <legend class="filter__range__title filter__title">Стоимость:</legend>
+            <span class="visually__hidden">Отсортировать по стоимости</span>
             <div class="range__controls">
               <div class="scale">
                 <div class="bar" style="width: 62%; margin-left: 3%;"></div>
               </div>
-              <div class="toggle toggle__min" tabindex="0" style="left: 8%;"></div>
+              <div class="toggle toggle__min" tabindex="0" style="left: 7%;"></div>
               <div class="toggle toggle__max" tabindex="0" style="left: 62%;"></div>
             </div>
             <div class="price__controls">
@@ -87,6 +88,7 @@
 
           <fieldset class="filter__group__grid">
             <legend class="filter__grid__title filter__title">Сетка:</legend>
+            <span class="visually__hidden">Выбрать вид построения сетки шаблона</span>
             <label class="filter__grid">
               <input class="visually__hidden radio__grid" type="radio" name="grid" checked>
               <span class="filter__radio">Адаптивная</span>
@@ -103,6 +105,7 @@
 
           <fieldset class="filter__group__features">
             <legend class="filter__feautures__title filter__title">Особенности:</legend>
+            <span class="visually__hidden">Выбрать особенности шаблона</span>
             <label class="filter__features">
               <input class="visually__hidden checkbox__features" type="checkbox" checked>
               <span class="filter__checkbox">Слайдер</span>
@@ -125,7 +128,7 @@
             </label>
           </fieldset>
 
-          <button class="filter__button" type="submit">Показать</button>
+          <button class="filter__button" type="submit" aria-label="Показать отсортированные товары">Показать</button>
         </form>
 
       </section>
@@ -285,18 +288,18 @@
             <p class="contacts__popup__title">Напишите нам</p>
             <label class="contacts__popup__input__name">
               <span class="contacts__popup__name__title">Ваше имя:</span>
-              <input class="contacts__popup__name" type="text" placeholder="Имя Фамилия">
+              <input class="contacts__popup__name popup__input" type="text" placeholder="Имя Фамилия">
             </label>
             <label class="contacts__popup__input__email">
               <span class="contacts__popup__email__title">Ваш email:</span>
-              <input class="contacts__popup__email" type="email" placeholder="email@example.com">
+              <input class="contacts__popup__email popup__input" type="email" placeholder="email@example.com">
             </label>
             <label class="contacts__popup__input__textarea">
               <span class="contacts__popup__textarea__title">Текст письма:</span>
-              <textarea class="contacts__popup__textarea" cols="30" rows="10">В свободной форме</textarea>
+              <textarea class="contacts__popup__textarea popup__input" cols="30" rows="10">В свободной форме</textarea>
             </label>
-            <button class="contacts__popup__button button" type="submit">Отправить</button>
-            <button class="contacts__popup__button__close" id="close__popup" type="button"></button>
+            <button class="contacts__popup__button button" type="submit" aria-label="отправить введённые данные">Отправить</button>
+            <button class="contacts__popup__button__close" id="close__popup" type="button" aria-label="закрыть форму обратной связи"></button>
           </form>
         </div>
       </div>

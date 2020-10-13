@@ -1,5 +1,7 @@
 'use strict';
 
+// Slider //////////////////////////////////////////
+
 function getShow(selector, selector1) {
   document.querySelector(selector).classList.add('current');
   if (selector1) {
@@ -7,15 +9,15 @@ function getShow(selector, selector1) {
   }
 }
 
-function removeCurrent(doc) {
-  doc.forEach(item => item.classList.remove('current'));
-}
-
 function getHide(selector, selector1) {
   removeCurrent(document.querySelectorAll(selector));
   if (selector1) {
     removeCurrent(document.querySelectorAll(selector1));
   }
+}
+
+function removeCurrent(doc) {
+  doc.forEach(item => item.classList.remove('current'));
 }
 
 function addVisuallyHidden(selector, selector1) {
@@ -29,7 +31,20 @@ function removeVisuallyHidden(selector) {
   selector.classList.remove('visually__hidden');
 }
 
+function getHidePopup() {
+  getHide('.contacts__popup');
+}
+
+function clearHide() {
+  popup.classList.remove('hide');
+}
+
+function clearShow() {
+  popup.classList.remove('show');
+}
+
 if (document.querySelector('#index')) {
+
   const sliderItem = document.querySelectorAll('.advantages__item');
   const button1 = document.querySelector('#button1');
   const button2 = document.querySelector('#button2');
@@ -78,47 +93,63 @@ if (document.querySelector('#index')) {
   });
 }
 
+// Popup /////////////////////////////////////////////
+
 const popup = document.querySelector('.contacts__popup');
 const buttonOpenPopup = document.querySelector('#open__popup');
+const buttonClosePopup = popup.querySelector('#close__popup');
+const inputPopup = popup.querySelectorAll('.popup__input');
+const submitPopup = popup.querySelector('.contacts__popup__button');
 
-buttonOpenPopup.addEventListener('click', (event) => {
-  event.preventDefault();
+buttonOpenPopup.addEventListener('click', (evt) => {
+  evt.preventDefault();
   getShow('.contacts__popup');
   popup.classList.add('show');
+  if (!inputPopup[0].value) {
+    inputPopup[0].focus();
+  } else if (!inputPopup[1].value) {
+    inputPopup[1].focus();
+  } else {
+    inputPopup[2].focus();
+  }
 });
 
-function getHidePopup() {
-  getHide('.contacts__popup');
-}
-
-function clearHide() {
-  popup.classList.remove('hide');
-}
-
-function clearShow() {
-  popup.classList.remove('show');
-}
-
-const buttonClosePopup = document.querySelector('#close__popup');
-
-buttonClosePopup.addEventListener('click', () => {
+buttonClosePopup.addEventListener('click', (evt) => {
+  evt.preventDefault();
   popup.classList.add('hide');
-  setTimeout(getHidePopup, 1000);
-  setTimeout(clearHide, 1000);
-  setTimeout(clearShow, 1000);
+  setTimeout(getHidePopup, 500);
+  setTimeout(clearHide, 500);
+  setTimeout(clearShow, 500);
 });
 
 document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     popup.classList.add('hide');
-    setTimeout(getHidePopup, 1000);
-    setTimeout(clearHide, 1000);
-    setTimeout(clearShow, 1000);
+    setTimeout(getHidePopup, 500);
+    setTimeout(clearHide, 500);
+    setTimeout(clearShow, 500);
   }
 });
 
+submitPopup.addEventListener('click', (evt) => {
+  inputPopup.forEach(item => {
+    if (!item.value) {
+      evt.preventDefault();
+      const clearWrong = () => {
+        item.classList.remove('wrong');
+      };
+      item.classList.add('wrong');
+      setTimeout(clearWrong, 500);
+    }
+  });
+});
+
+// Pagination ///////////////////////////////////////////////
+
 if (document.querySelector('#catalog')) {
+
   const btns = document.querySelectorAll('.goods__pagination__link');
+  const btnNext = document.querySelector('.goods__next');
 
   btns.forEach((item, i) => {
     item.addEventListener('click', (evt) => {
@@ -130,8 +161,6 @@ if (document.querySelector('#catalog')) {
     });
   });
 
-  const btnNext = document.querySelector('.goods__next');
-  
   btnNext.addEventListener('click', (evt) => {
     evt.preventDefault();
     let count;
@@ -149,13 +178,25 @@ if (document.querySelector('#catalog')) {
     }
   });
 
+  // Goods popup ////////////////////////////////////////////////////
+
   const goodsPopup = document.querySelectorAll('.goods__popup');
   const goodsPopupLinks = document.querySelectorAll('.goods__popup__link');
   const goodsPopupButtons = document.querySelectorAll('.goods__popup__button');
 
-  goodsPopupLinks.forEach((item) => {
+  goodsPopupLinks.forEach((item, i) => {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
+
+      const goodsItem = document.querySelectorAll('.goods__item');
+      const hiddenPopup = document.createElement('div');
+      hiddenPopup.classList.add('goods__popup__hidden');
+      hiddenPopup.textContent = '3.10. Карточка товара: название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара. Модальное окно верстать не нужно. Для закрытия кликни по мне';
+      goodsItem[i].append(hiddenPopup);
+      hiddenPopup.addEventListener('click', () => {
+        hiddenPopup.remove(hiddenPopup);
+      });
+
     });
   });
 
@@ -176,4 +217,6 @@ if (document.querySelector('#catalog')) {
       goodsPopup[i].classList.remove('current');
     });
   });
+
+
 }
