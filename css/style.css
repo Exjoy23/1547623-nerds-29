@@ -1230,9 +1230,9 @@ a {
 .scale {
   position: absolute;
   top: 39px;
-  left: 25px;
+  left: 22px;
 
-  width: 210px;
+  width: 216px;
   height: 2px;
 
   background-color: var(--range-scale);
@@ -1809,20 +1809,4 @@ a {
 
 .goods__pagination__link.current:active {
   box-shadow: none;
-}
-
-.goods__popup__hidden {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 4;
-
-  width: 760px;
-  height: 620px;
-
-  border-radius: 5px;
-
-  background-color: var(--basic-gray);
-
-  color: var(--basic-white);
 }

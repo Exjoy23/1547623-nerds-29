@@ -4,6 +4,7 @@
 
 function getShow(selector, selector1) {
   document.querySelector(selector).classList.add('current');
+
   if (selector1) {
     document.querySelector(selector1).classList.add('current');
   }
@@ -11,6 +12,7 @@ function getShow(selector, selector1) {
 
 function getHide(selector, selector1) {
   removeCurrent(document.querySelectorAll(selector));
+
   if (selector1) {
     removeCurrent(document.querySelectorAll(selector1));
   }
@@ -22,6 +24,7 @@ function removeCurrent(doc) {
 
 function addVisuallyHidden(selector, selector1) {
   selector.classList.add('visually__hidden');
+
   if (selector1) {
     selector1.classList.add('visually__hidden');
   }
@@ -101,10 +104,27 @@ const buttonClosePopup = popup.querySelector('#close__popup');
 const inputPopup = popup.querySelectorAll('.popup__input');
 const submitPopup = popup.querySelector('.contacts__popup__button');
 
+let isStorageSupport = true;
+let storageName = '';
+let storageEmail = '';
+
+try {
+  storageName = localStorage.getItem('name');
+  storageEmail = localStorage.getItem('email');
+} catch (err) {
+  isStorageSupport = false;
+}
+
 buttonOpenPopup.addEventListener('click', (evt) => {
   evt.preventDefault();
   getShow('.contacts__popup');
   popup.classList.add('show');
+
+  if (storageName && storageEmail) {
+    inputPopup[0].value = storageName;
+    inputPopup[1].value = storageEmail;
+  }
+
   if (!inputPopup[0].value) {
     inputPopup[0].focus();
   } else if (!inputPopup[1].value) {
@@ -123,6 +143,7 @@ buttonClosePopup.addEventListener('click', (evt) => {
 });
 
 document.addEventListener('keydown', (evt) => {
+
   if (evt.key === 'Escape') {
     popup.classList.add('hide');
     setTimeout(getHidePopup, 500);
@@ -133,6 +154,7 @@ document.addEventListener('keydown', (evt) => {
 
 submitPopup.addEventListener('click', (evt) => {
   inputPopup.forEach(item => {
+
     if (!item.value) {
       evt.preventDefault();
       const clearWrong = () => {
@@ -140,6 +162,12 @@ submitPopup.addEventListener('click', (evt) => {
       };
       item.classList.add('wrong');
       setTimeout(clearWrong, 500);
+    } else {
+
+      if (isStorageSupport) {
+        localStorage.setItem('name', inputPopup[0].value);
+        localStorage.setItem('email', inputPopup[1].value);
+      }
     }
   });
 });
@@ -166,11 +194,13 @@ if (document.querySelector('#catalog')) {
     let count;
     btns.forEach((item, i) => {
       const currentLink = item.classList.contains('current');
+
       if (currentLink) {
         count = i + 1;
       }
       btns[i].classList.remove('current');
     });
+
     if (count < btns.length) {
       btns[count].classList.add('current');
     } else {
@@ -187,16 +217,6 @@ if (document.querySelector('#catalog')) {
   goodsPopupLinks.forEach((item, i) => {
     item.addEventListener('click', (evt) => {
       evt.preventDefault();
-
-      const goodsItem = document.querySelectorAll('.goods__item');
-      const hiddenPopup = document.createElement('div');
-      hiddenPopup.classList.add('goods__popup__hidden');
-      hiddenPopup.textContent = '3.10. Карточка товара: название товара является ссылкой, клик по нему открывает модальное окно с демонстрацией товара. Модальное окно верстать не нужно. Для закрытия кликни по мне';
-      goodsItem[i].append(hiddenPopup);
-      hiddenPopup.addEventListener('click', () => {
-        hiddenPopup.remove(hiddenPopup);
-      });
-
     });
   });
 
@@ -218,5 +238,245 @@ if (document.querySelector('#catalog')) {
     });
   });
 
+  // Range ///////////////////////////////////////////////////////////////
 
+  const formRange = document.querySelector('.range__controls');
+  const toggleMin = formRange.querySelector('.toggle__min');
+  const toggleMax = formRange.querySelector('.toggle__max');
+  const barPrice = formRange.querySelector('.bar');
+  const minPrice = document.querySelector('#price__min');
+  const maxPrice = document.querySelector('#price__max');
+
+  let mousedownToggleMin = false;
+  let mousedownToggleMax = false;
+  let x = 0;
+  let totalPrice = 21000;
+  let positionMin = 400;
+  let positionMax = 540;
+  let priceStep = totalPrice / 200;
+
+  minPrice.addEventListener('blur', () => {
+
+    if (minPrice.value <= 0) {
+      minPrice.value = 0;
+    }
+    positionMin = minPrice.value / priceStep + 400;
+
+    if (positionMin > positionMax - 20) {
+      positionMin = positionMax - 20;
+      minPrice.value = Math.round((positionMin - 400) * priceStep);
+    }
+    toggleMin.style.left = (positionMin - 380) + 'px';
+    barPrice.style.marginLeft = positionMin - 400 + 'px';
+    barPrice.style.width = positionMax - positionMin + 'px';
+  });
+
+  maxPrice.addEventListener('blur', () => {
+
+    if (maxPrice.value >= totalPrice) {
+      maxPrice.value = totalPrice;
+    }
+    positionMax = maxPrice.value / priceStep + 400;
+
+    if (positionMax < positionMin + 20) {
+      positionMax = positionMin + 20;
+      maxPrice.value = Math.round((positionMax - 400) * priceStep);
+    }
+    toggleMax.style.left = (positionMax - 380) + 'px';
+    barPrice.style.marginLeft = positionMin - 400 + 'px';
+    barPrice.style.width = positionMax - positionMin + 'px';
+  });
+
+  toggleMin.addEventListener('mousedown', (evt) => {
+    mousedownToggleMin = true;
+  });
+
+  toggleMax.addEventListener('mousedown', (evt) => {
+    mousedownToggleMax = true;
+  });
+
+  window.addEventListener('mouseup', (evt) => {
+
+    if (mousedownToggleMin) {
+      mousedownToggleMin = false;
+    }
+
+    if (mousedownToggleMax) {
+      mousedownToggleMax = false;
+    }
+  });
+
+  formRange.addEventListener('mousemove', (evt) => {
+
+    if (mousedownToggleMin) {
+      x = evt.screenX;
+      positionMin = x;
+
+      if (positionMin > positionMax - 20) {
+        positionMin = positionMax - 20;
+      }
+      toggleMin.style.left = (positionMin - 380) + 'px';
+
+      if (positionMin <= 400) {
+        positionMin = 400;
+        toggleMin.style.left = 7 + '%';
+      }
+      if (positionMin >= 600) {
+        positionMin = 600;
+        toggleMin.style.left = 85 + '%';
+      }
+
+      barPrice.style.marginLeft = positionMin - 400 + 'px';
+      barPrice.style.width = positionMax - positionMin + 'px';
+
+      minPrice.value = Math.round(((positionMin - 400) / 200) * totalPrice);
+    }
+  });
+
+  formRange.addEventListener('mousemove', (evt) => {
+
+    if (mousedownToggleMax) {
+      x = evt.screenX;
+      positionMax = x;
+
+      if (positionMax < positionMin + 20) {
+        positionMax = positionMin + 20;
+      }
+      toggleMax.style.left = (positionMax - 380) + 'px';
+
+      if (positionMax <= 400) {
+        positionMax = 400;
+        toggleMax.style.left = 7 + '%';
+      }
+
+      if (positionMax >= 600) {
+        positionMax = 600;
+        toggleMax.style.left = 85 + '%';
+      }
+
+      barPrice.style.marginLeft = positionMin - 400 + 'px';
+      barPrice.style.width = positionMax - positionMin + 'px';
+
+      maxPrice.value = Math.round(((positionMax - 400) / 200) * totalPrice);
+    }
+  });
+
+  const conrolEdgeMin = function () {
+
+    if (positionMin > positionMax - 20) {
+      positionMin = positionMax - 20;
+      minPrice.value = Math.round((positionMin - 400) * priceStep);
+    }
+
+    if (positionMin <= 400) {
+      positionMin = 400;
+      toggleMin.style.left = 7 + '%';
+    }
+
+    if (positionMin >= 600) {
+      positionMin = 600;
+      toggleMin.style.left = 85 + '%';
+    }
+    toggleMin.style.left = (positionMin - 380) + 'px';
+    barPrice.style.marginLeft = positionMin - 400 + 'px';
+    barPrice.style.width = positionMax - positionMin + 'px';
+  };
+
+  const conrolEdgeMax = function () {
+
+    if (positionMax < positionMin + 20) {
+      positionMax = positionMin + 20;
+      maxPrice.value = Math.round((positionMax - 400) * priceStep);
+    }
+
+    if (positionMax <= 400) {
+      positionMax = 400;
+      toggleMax.style.left = 7 + '%';
+    }
+
+    if (positionMax >= 600) {
+      positionMax = 600;
+      toggleMax.style.left = 85 + '%';
+    }
+    toggleMax.style.left = (positionMax - 380) + 'px';
+    barPrice.style.marginLeft = positionMin - 400 + 'px';
+    barPrice.style.width = positionMax - positionMin + 'px';
+  };
+
+  let toggleMinDown = false;
+  let toggleMaxDown = false;
+  let toggleMinFocus = false;
+  let toggleMaxFocus = false;
+
+  toggleMin.addEventListener('keyup', () => {
+    toggleMinDown = false;
+  });
+
+  toggleMax.addEventListener('keyup', () => {
+    toggleMaxDown = false;
+  });
+
+  toggleMin.addEventListener('blur', () => {
+    toggleMinFocus = false;
+  });
+
+  toggleMax.addEventListener('blur', () => {
+    toggleMaxFocus = false;
+  });
+
+  toggleMin.addEventListener('focus', () => {
+    toggleMinFocus = true;
+    document.addEventListener('keydown', (evt) => {
+      toggleMinDown = true;
+
+      if (toggleMinDown && toggleMinFocus) {
+
+        if (evt.key === 'ArrowUp' || evt.key === 'ArrowRight') {
+          evt.preventDefault();
+          positionMin++;
+          minPrice.value = Math.round((positionMin - 400) * priceStep);
+          conrolEdgeMin();
+        }
+
+        if (evt.key === 'ArrowDown' || evt.key === 'ArrowLeft') {
+          evt.preventDefault();
+          positionMin--;
+          minPrice.value = Math.round((positionMin - 400) * priceStep);
+          conrolEdgeMin();
+
+          if (minPrice.value <= 0) {
+            minPrice.value = 0;
+          }
+        }
+      }
+    });
+  });
+
+  toggleMax.addEventListener('focus', () => {
+    toggleMaxFocus = true;
+    document.addEventListener('keydown', (evt) => {
+      toggleMaxDown = true;
+
+      if (toggleMaxDown && toggleMaxFocus) {
+
+        if (evt.key === 'ArrowUp' || evt.key === 'ArrowRight') {
+          evt.preventDefault();
+          positionMax++;
+          maxPrice.value = Math.round((positionMax - 400) * priceStep);
+          conrolEdgeMax();
+
+          if (maxPrice.value >= totalPrice) {
+            maxPrice.value = totalPrice;
+          }
+        }
+
+        if (evt.key === 'ArrowDown' || evt.key === 'ArrowLeft') {
+          evt.preventDefault();
+          positionMax--;
+          maxPrice.value = Math.round((positionMax - 400) * priceStep);
+          conrolEdgeMax();
+        }
+      }
+    });
+  });
 }
